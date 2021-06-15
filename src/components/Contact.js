@@ -8,7 +8,7 @@ const Contact = ({id, firstname, lastname, email, mobile, date, removeContactHan
     return(
         <Card style={{ width:'15rem'}} className="contact">
             <Card.Body>
-                <Card.Title className="contact-name">`${firstname} {lastname}`</Card.Title>
+                <Card.Title className="contact-name">{firstname} {lastname}</Card.Title>
                 <div className="contact-details">
                     <div>
                         <FaMobile/>{mobile}
