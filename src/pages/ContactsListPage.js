@@ -2,7 +2,7 @@ import React from 'react';
 import _ from 'lodash';
 import Contact from '../components/Contact';
 
-const Contacts = ({contacts}) => {
+const Contacts = ({contacts, setContacts}) => {
 
   const removeContactHandler = (id) => {
     setContacts(contacts.filter((contact) => contact.id !== id));
@@ -14,7 +14,7 @@ const Contacts = ({contacts}) => {
       <div className="contacts-list">
         {
           _.isEmpty(contacts) ? (<p>No Contacts</p>) : 
-          (contacts.map((contact, key) => (<Book key={key} {...contact} removeContactHandler={removeContactHandler}/>)))   
+          (contacts.map((contact, key) => (<Contact key={key} {...contact} removeContactHandler={removeContactHandler}/>)))   
         }
       </div>
     </>
